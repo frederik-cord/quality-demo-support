@@ -10,7 +10,7 @@ setup(
         "PILLOW>=9.0.0",
         "numpy>=1.21.0",
         "cord-client-python @ git+https://github.com/cord-team/cord-client-python.git@rp/floaty-tqdm",
-        "cord-pytorch-dataset @ git+https://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@github.com/cord-team/cord-pytorch-dataset.git",
+        "cord-dataset @ git+https://github.com/cord-team/cord-dataset.git",
         "tqdm",
         "matplotlib>=3.5.1",
         "pandas>=1.1",
