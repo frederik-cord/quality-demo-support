@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 import requests
 
-from api_client import ApiClient
+from .api_client import ApiClient
 
 logger = logging.getLogger(__name__)
 
