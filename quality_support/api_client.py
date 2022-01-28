@@ -1,4 +1,6 @@
 import urllib
+from typing import Optional
+
 import requests as requests
 
 
