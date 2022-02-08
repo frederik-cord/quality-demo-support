@@ -7,15 +7,15 @@ from PIL import Image, ImageOps
 import numpy as np
 
 from cord.client import CordClient
-from cord_dataset.dataset import get_label_row, extract_frames
-from cord_dataset.objects import (
+from encord_dataset.dataset import get_label_row, extract_frames
+from encord_dataset.objects import (
     Ontology,
     ImageLabelRow,
     VideoLabelRow,
     DataUnit,
     DataUnitObject,
 )
-from cord_dataset.utils import download_file
+from encord_dataset.utils import download_file
 from concurrent.futures import ThreadPoolExecutor as Executor
 
 logger = logging.getLogger(__name__)
