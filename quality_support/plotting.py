@@ -1,3 +1,4 @@
+import numpy as np
 from pathlib import Path
 from typing import Optional, Union, List
 
@@ -27,7 +28,8 @@ def plot_dataframe_samples(
     :param dataframe: The dataframe with the data unit information needed (dh, oh)
     :param file_path: Optional file_path to store figure.
     """
-    fig, ax = plt.subplots(3, 3, figsize=(20, 12))
+    rows, cols = np.round(np.sqrt(len(dataframe)))
+    fig, ax = plt.subplots(rows, cols, figsize=(4*rows, 3*cols))
     ax = ax.reshape(-1)
 
     for a, row in zip(ax, dataframe.to_dict(orient="records")):
