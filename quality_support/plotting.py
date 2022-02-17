@@ -28,7 +28,8 @@ def plot_dataframe_samples(
     :param dataframe: The dataframe with the data unit information needed (dh, oh)
     :param file_path: Optional file_path to store figure.
     """
-    rows, cols = np.round(np.sqrt(len(dataframe)))
+
+    rows = cols = np.round(np.sqrt(len(dataframe)).astype(int))
     fig, ax = plt.subplots(rows, cols, figsize=(4*rows, 3*cols))
     ax = ax.reshape(-1)
 
