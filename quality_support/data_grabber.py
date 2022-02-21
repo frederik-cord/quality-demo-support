@@ -1,4 +1,6 @@
 import logging
+
+import cord
 from tqdm import tqdm
 import os
 from pathlib import Path
@@ -72,10 +74,13 @@ class DataGrabber:
         api_key: str,
         cache_dir: str = "/tmp/cord_data",
         download: bool = True,
+        domain: Optional[str] = None
     ):
         self.download = download
         self.cache_dir = Path(cache_dir)
-        self.client = CordClient.initialise(project_id, api_key)
+
+        domain = domain if domain else cord.configs.CORD_DOMAIN
+        self.client = CordClient.initialise(project_id, api_key, domain=domain)
 
         project = self.client.get_project()
 
